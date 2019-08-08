@@ -65,7 +65,7 @@ class MyRAT(PuppetRAT):
 ```
 
 # Documentation
-* TBD
+* https://intezer.github.io/MoP
 
 # Dependencies
 * Python 3
