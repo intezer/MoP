@@ -1,0 +1,352 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Filesystem Module &mdash; MoP 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Network Module" href="network.html" />
+    <link rel="prev" title="Setup" href="setup.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> MoP
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setup.html">Setup</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Filesystem Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="network.html">Network Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="process_manager.html">Process Manager Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="winapi.html">WinAPI Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="new_plugin.html">Adding New PuppetRAT Plugin</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">MoP</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Filesystem Module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/filesystem.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="filesystem-module">
+<h1>Filesystem Module<a class="headerlink" href="#filesystem-module" title="Permalink to this headline">¶</a></h1>
+<p>Contains VFS(Virtual File System) related objects. Filesystem is loaded from an initial template(resources/fs_template.pkl) in Pickle format.
+If you wish to create your own template please take a look at the map_filesystem.py script under resources directory.</p>
+<dl class="class">
+<dt id="stage_props.filesystem.VirtualFileSystem">
+<em class="property">class </em><code class="sig-prename descclassname">stage_props.filesystem.</code><code class="sig-name descname">VirtualFileSystem</code><span class="sig-paren">(</span><em class="sig-param">artifacts_store_root: str</em>, <em class="sig-param">default_username: str</em>, <em class="sig-param">filesystem_template_path: str = '/home/omri/PycharmProjects/MoP/stage_props/../resources/fs_template.pkl'</em>, <em class="sig-param">lazy_load: bool = True</em><span class="sig-paren">)</span><a class="headerlink" href="#stage_props.filesystem.VirtualFileSystem" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="stage_props.filesystem.VirtualFileSystem.exists">
+<code class="sig-name descname">exists</code><span class="sig-paren">(</span><em class="sig-param">path</em><span class="sig-paren">)</span><a class="headerlink" href="#stage_props.filesystem.VirtualFileSystem.exists" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if a directory exists by path</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="stage_props.filesystem.VirtualFileSystem.is_dir">
+<code class="sig-name descname">is_dir</code><span class="sig-paren">(</span><em class="sig-param">path</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#stage_props.filesystem.VirtualFileSystem.is_dir" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if a path is an existing directory</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="stage_props.filesystem.VirtualFileSystem.is_file">
+<code class="sig-name descname">is_file</code><span class="sig-paren">(</span><em class="sig-param">path</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#stage_props.filesystem.VirtualFileSystem.is_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if a path is an existing file</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="stage_props.filesystem.VirtualFileSystem.listdir">
+<code class="sig-name descname">listdir</code><span class="sig-paren">(</span><em class="sig-param">path</em><span class="sig-paren">)</span><a class="headerlink" href="#stage_props.filesystem.VirtualFileSystem.listdir" title="Permalink to this definition">¶</a></dt>
+<dd><p>List directory by path</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="stage_props.filesystem.VirtualFileSystem.mkdir">
+<code class="sig-name descname">mkdir</code><span class="sig-paren">(</span><em class="sig-param">path: str</em><span class="sig-paren">)</span> &#x2192; stage_props.filesystem.VirtualDirectory<a class="headerlink" href="#stage_props.filesystem.VirtualFileSystem.mkdir" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new directory</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="stage_props.filesystem.VirtualFileSystem.open">
+<code class="sig-name descname">open</code><span class="sig-paren">(</span><em class="sig-param">file_path: str</em><span class="sig-paren">)</span> &#x2192; stage_props.filesystem.VirtualFile<a class="headerlink" href="#stage_props.filesystem.VirtualFileSystem.open" title="Permalink to this definition">¶</a></dt>
+<dd><p>Open a file by path for r/w operations</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="stage_props.filesystem.VirtualFile">
+<em class="property">class </em><code class="sig-prename descclassname">stage_props.filesystem.</code><code class="sig-name descname">VirtualFile</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">physical_path</em>, <em class="sig-param">default_data=b''</em>, <em class="sig-param">default_size: int = 0</em><span class="sig-paren">)</span><a class="headerlink" href="#stage_props.filesystem.VirtualFile" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="stage_props.filesystem.VirtualFile.append">
+<code class="sig-name descname">append</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="headerlink" href="#stage_props.filesystem.VirtualFile.append" title="Permalink to this definition">¶</a></dt>
+<dd><p>Append data to the end of the file</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="stage_props.filesystem.VirtualFile.close">
+<code class="sig-name descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#stage_props.filesystem.VirtualFile.close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Close file object. Automatically flush any written data to disk</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="stage_props.filesystem.VirtualFile.flush">
+<code class="sig-name descname">flush</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#stage_props.filesystem.VirtualFile.flush" title="Permalink to this definition">¶</a></dt>
+<dd><p>Flush any written data to disk</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="stage_props.filesystem.VirtualFile.read">
+<code class="sig-name descname">read</code><span class="sig-paren">(</span><em class="sig-param">n=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#stage_props.filesystem.VirtualFile.read" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read n bytes from file</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="stage_props.filesystem.VirtualFile.seek">
+<code class="sig-name descname">seek</code><span class="sig-paren">(</span><em class="sig-param">pos</em><span class="sig-paren">)</span><a class="headerlink" href="#stage_props.filesystem.VirtualFile.seek" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the file’s pointer position</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="stage_props.filesystem.VirtualFile.sha256">
+<em class="property">property </em><code class="sig-name descname">sha256</code><a class="headerlink" href="#stage_props.filesystem.VirtualFile.sha256" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate SHA256 of file’s data</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="stage_props.filesystem.VirtualFile.size">
+<em class="property">property </em><code class="sig-name descname">size</code><a class="headerlink" href="#stage_props.filesystem.VirtualFile.size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the current size of the file</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="stage_props.filesystem.VirtualFile.write">
+<code class="sig-name descname">write</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="headerlink" href="#stage_props.filesystem.VirtualFile.write" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write data to file</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="stage_props.filesystem.VirtualDirectory">
+<em class="property">class </em><code class="sig-prename descclassname">stage_props.filesystem.</code><code class="sig-name descname">VirtualDirectory</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">physical_path</em>, <em class="sig-param">parent_directory=None</em><span class="sig-paren">)</span><a class="headerlink" href="#stage_props.filesystem.VirtualDirectory" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="stage_props.filesystem.VirtualDirectory.create_directory">
+<code class="sig-name descname">create_directory</code><span class="sig-paren">(</span><em class="sig-param">name: str</em><span class="sig-paren">)</span> &#x2192; stage_props.filesystem.VirtualDirectory<a class="headerlink" href="#stage_props.filesystem.VirtualDirectory.create_directory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create new child directory</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="stage_props.filesystem.VirtualDirectory.create_file">
+<code class="sig-name descname">create_file</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">default_size: int = 0</em><span class="sig-paren">)</span> &#x2192; stage_props.filesystem.VirtualFile<a class="headerlink" href="#stage_props.filesystem.VirtualDirectory.create_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create new file under this directory</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="stage_props.filesystem.VirtualDirectory.exists">
+<code class="sig-name descname">exists</code><span class="sig-paren">(</span><em class="sig-param">name</em><span class="sig-paren">)</span><a class="headerlink" href="#stage_props.filesystem.VirtualDirectory.exists" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if file or directory are childs of current directory</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="stage_props.filesystem.VirtualDirectory.is_dir">
+<code class="sig-name descname">is_dir</code><span class="sig-paren">(</span><em class="sig-param">name</em><span class="sig-paren">)</span><a class="headerlink" href="#stage_props.filesystem.VirtualDirectory.is_dir" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if directory is a child of current directory</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="stage_props.filesystem.VirtualDirectory.is_file">
+<code class="sig-name descname">is_file</code><span class="sig-paren">(</span><em class="sig-param">name</em><span class="sig-paren">)</span><a class="headerlink" href="#stage_props.filesystem.VirtualDirectory.is_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if file is a child of current directory</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="stage_props.filesystem.VirtualDirectory.open_dir">
+<code class="sig-name descname">open_dir</code><span class="sig-paren">(</span><em class="sig-param">name</em><span class="sig-paren">)</span><a class="headerlink" href="#stage_props.filesystem.VirtualDirectory.open_dir" title="Permalink to this definition">¶</a></dt>
+<dd><p>Open existing sub-directory</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="stage_props.filesystem.VirtualDirectory.open_file">
+<code class="sig-name descname">open_file</code><span class="sig-paren">(</span><em class="sig-param">name</em><span class="sig-paren">)</span><a class="headerlink" href="#stage_props.filesystem.VirtualDirectory.open_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Open existing file under current directory</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="network.html" class="btn btn-neutral float-right" title="Network Module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="setup.html" class="btn btn-neutral float-left" title="Setup" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Intezer
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,256 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Process Manager Module &mdash; MoP 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="WinAPI Module" href="winapi.html" />
+    <link rel="prev" title="Network Module" href="network.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> MoP
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setup.html">Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="filesystem.html">Filesystem Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="network.html">Network Module</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Process Manager Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="winapi.html">WinAPI Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="new_plugin.html">Adding New PuppetRAT Plugin</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">MoP</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Process Manager Module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/process_manager.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-stage_props.process_manager">
+<span id="process-manager-module"></span><h1>Process Manager Module<a class="headerlink" href="#module-stage_props.process_manager" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="stage_props.process_manager.Process">
+<em class="property">class </em><code class="sig-prename descclassname">stage_props.process_manager.</code><code class="sig-name descname">Process</code><span class="sig-paren">(</span><em class="sig-param">pid</em>, <em class="sig-param">ppid</em>, <em class="sig-param">name</em>, <em class="sig-param">cmdline</em><span class="sig-paren">)</span><a class="headerlink" href="#stage_props.process_manager.Process" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="stage_props.process_manager.Process.cmdline">
+<em class="property">property </em><code class="sig-name descname">cmdline</code><a class="headerlink" href="#stage_props.process_manager.Process.cmdline" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 3</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="stage_props.process_manager.Process.name">
+<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#stage_props.process_manager.Process.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 2</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="stage_props.process_manager.Process.pid">
+<em class="property">property </em><code class="sig-name descname">pid</code><a class="headerlink" href="#stage_props.process_manager.Process.pid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 0</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="stage_props.process_manager.Process.ppid">
+<em class="property">property </em><code class="sig-name descname">ppid</code><a class="headerlink" href="#stage_props.process_manager.Process.ppid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 1</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="stage_props.process_manager.process_by_name">
+<code class="sig-prename descclassname">stage_props.process_manager.</code><code class="sig-name descname">process_by_name</code><span class="sig-paren">(</span><em class="sig-param">proces_name: str</em><span class="sig-paren">)</span> &#x2192; List[stage_props.process_manager.Process]<a class="headerlink" href="#stage_props.process_manager.process_by_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get Process object by process name</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="stage_props.process_manager.process_by_pid">
+<code class="sig-prename descclassname">stage_props.process_manager.</code><code class="sig-name descname">process_by_pid</code><span class="sig-paren">(</span><em class="sig-param">pid: int</em><span class="sig-paren">)</span> &#x2192; stage_props.process_manager.Process<a class="headerlink" href="#stage_props.process_manager.process_by_pid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get Process object by process id</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="stage_props.process_manager.pslist">
+<code class="sig-prename descclassname">stage_props.process_manager.</code><code class="sig-name descname">pslist</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Generator[[stage_props.process_manager.Process, None], None]<a class="headerlink" href="#stage_props.process_manager.pslist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve a partiality randomized process list</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="winapi.html" class="btn btn-neutral float-right" title="WinAPI Module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="network.html" class="btn btn-neutral float-left" title="Network Module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Intezer
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
