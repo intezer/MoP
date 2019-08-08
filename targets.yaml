@@ -1,0 +1,9 @@
+targets:
+#  test_Gh0stRAT:
+#    ip: 127.0.0.1
+#    port: 80
+#    plugin: plugins.gh0st_rat.Gh0stRAT
+#  test_NjRAT:
+#    ip: 127.0.0.1
+#    port: 5552
+#    plugin: plugins.njrat.NjRAT

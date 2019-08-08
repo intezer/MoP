@@ -1,0 +1,47 @@
+CommandLine,Name,ParentProcessId,ProcessId
+,System Idle Process,0,0
+,System,0,4
+,smss.exe,4,276
+,csrss.exe,348,356
+,wininit.exe,348,448
+,csrss.exe,440,456
+,services.exe,448,508
+,winlogon.exe,440,532
+,lsass.exe,448,544
+,lsm.exe,448,552
+,svchost.exe,508,664
+,svchost.exe,508,776
+,svchost.exe,508,868
+,svchost.exe,508,908
+,svchost.exe,508,936
+,audiodg.exe,868,1012
+,svchost.exe,508,1088
+,svchost.exe,508,1280
+,spoolsv.exe,508,1424
+,svchost.exe,508,1460
+,IpOverUsbSvc.exe,508,1568
+,taskeng.exe,936,1800
+,GoogleUpdate.exe,1800,1984
+,taskhost.exe,508,312
+,sppsvc.exe,508,1968
+,svchost.exe,508,1172
+,msdtc.exe,508,2200
+,WmiPrvSE.exe,664,2356
+,svchost.exe,508,2636
+taskeng.exe {2C610772-6163-42EF-A2A2-CE75EE08DCF7},taskeng.exe,936,2760
+,conhost.exe,456,2868
+,dwm.exe,908,2916
+C:\Windows\Explorer.EXE,explorer.exe,2908,2940
+/MINIMIZED,BitTorrent.exe,2940,3072
+BitTorrent_3072_002F0648_1218394761 BT4823DF041B09 BitTorrent,bittorrentie.exe,3072,3452
+BitTorrent_3072_002F06E0_271169444 BT4823DF041B09 BitTorrent,bittorrentie.exe,3072,3488
+,SearchIndexer.exe,508,3608
+,svchost.exe,508,1848
+,conhost.exe,456,876
+,TrustedInstaller.exe,508,2608
+,SearchProtocolHost.exe,3608,2912
+,SearchFilterHost.exe,3608,2704
+,chrome.exe,2940,2623
+--type=crashpad-handler /prefetch:7 "--database=C:\Users\omrib\AppData\Local\Google\Chrome\User Data\Crashpad" "--metrics-dir=C:\Users\Public\AppData\Local\Google\Chrome\User Data" --url=https://clients2.google.com/cr/report --annotation=channel= --annotation=plat=Win32 --annotation=prod=Chrome --annotation=ver=58.0.3029.96,chrome.exe,2623,4788
+--type=watcher --main-thread-id=2624 --on-initialized-event-handle=292 --parent-handle=296 /prefetch:6,chrome.exe,2623,2700
+--type=watcher --main-thread-id=2624 --on-initialized-event-handle=292 --parent-handle=296 /prefetch:6,chrome.exe,2623,1436

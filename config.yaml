@@ -1,0 +1,13 @@
+general:
+  random_rat_pid_min: 1000
+  random_rat_pid_max: 4999
+  usernames: ['kaley', 'johnny', 'jim', 'mayim', 'melissa', 'kunal', 'simon', 'kevin', 'wil']
+filesystem:
+  template: 'resources/template.pkl'
+  template_default_user_name: 'john'
+screenshots:
+  templates: 'resources/desktops'
+proxy:
+  use_proxy: False
+  ip: localhost
+  port: 9050
